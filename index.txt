@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterclass Charisme - Les 9 Lois pour Transformer votre Présence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d4af37; /* Or royal */
+            --primary-dark: #b8860b;
+            --secondary: #1a1a2e; /* Bleu nuit */
+            --accent: #c53030; /* Rouge bordeaux */
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #28a745;
+            --transition: all 0.4s ease;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.2);
+            --border-radius: 10px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--secondary);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 28px;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .price-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 30px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        .new-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .currency {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 18px 45px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+            border: none;
+            cursor: pointer;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+            background: #e6c34d;
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Problem Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: var(--gray);
+        }
+
+        .problem-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .problem-text, .problem-image {
+            flex: 1;
+        }
+
+        .problem-list {
+            list-style: none;
+        }
+
+        .problem-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+
+        .problem-list li i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .problem-image {
+            background: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center center/cover;
+            height: 400px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+            color: var(--secondary);
+        }
+
+        .benefit-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Program Section */
+        .program-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .module {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+        }
+
+        .module-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .module-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+
+        .module-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 80px;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #ddd;
+            overflow: hidden;
+        }
+
+        .author-info h4 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        /* Bonus Section */
+        .bonus-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, #0d0d1a 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .bonus-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bonus-card::before {
+            content: 'CADEAU';
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 30px;
+            transform: rotate(45deg);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .bonus-icon {
+            font-size: 50px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Pricing Section */
+        .pricing-box {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-hover);
+            text-align: center;
+            border: 2px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-box::before {
+            content: 'OFFRE EXCLUSIVE';
+            position: absolute;
+            top: 20px;
+            right: -50px;
+            background: var(--accent);
+            color: white;
+            padding: 10px 50px;
+            transform: rotate(45deg);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .pricing-header {
+            margin-bottom: 30px;
+        }
+
+        .pricing-title {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .investment {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 20px 0;
+        }
+
+        .currency {
+            font-size: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li i {
+            color: var(--success);
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 700;
+            background: var(--secondary);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary);
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .problem-content {
+                flex-direction: column;
+            }
+            
+            .problem-image {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero-title {
+                font-size: 2.3rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .new-price {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Charisme<span>Master</span></div>
+                <div class="nav-links">
+                    <a href="#programme">Programme</a>
+                    <a href="#benefits">Bénéfices</a>
+                    <a href="#testimonials">Témoignages</a>
+                    <a href="#pricing">Offre</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Formation Premium</div>
+                <h1 class="hero-title">Les 9 Lois du Charisme</h1>
+                <p class="hero-subtitle">Développez une présence magnétique et transformez votre vie sociale et professionnelle</p>
+                <p class="hero-description">Découvrez les secrets des leaders charismatiques et apprenez à captiver n'importe quelle audience, créer des connexions profondes et obtenir le respect que vous méritez.</p>
+                
+                <div class="price-tag">
+                    <span class="old-price">5,000 FCFA</span>
+                    <span class="new-price">1,500 FCFA</span>
+                    <span class="currency">FCFA</span>
+                </div>
+                
+                <a href="#pricing" class="cta-button">
+                    <i class="fas fa-lock"></i> Accéder à la formation
+                </a>
+                
+                <div class="guarantee">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Garantie satisfait ou remboursé pendant 30 jours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section" id="problem">
+        <div class="container">
+            <h2 class="section-title">Le problème que vous connaissez trop bien</h2>
+            <p class="section-subtitle">Vous avez peut-être ressenti ces frustrations dans votre vie sociale ou professionnelle</p>
+            
+            <div class="problem-content">
+                <div class="problem-text">
+                    <ul class="problem-list">
+                        <li><i class="fas fa-times-circle"></i> Vous vous sentez invisible lors des réunions importantes</li>
+                        <li><i class="fas fa-times-circle"></i> Vous avez du mal à vous faire entendre et respecter</li>
+                        <li><i class="fas fa-times-circle"></i> Vous stressez à l'idée de parler en public</li>
+                        <li><i class="fas fa-times-circle"></i> Vous n'arrivez pas à créer des connexions authentiques</li>
+                        <li><i class="fas fa-times-circle"></i> Vous passez à côté d'opportunités professionnelles</li>
+                        <li><i class="fas fa-times-circle"></i> Vous manquez de confiance en vous dans les situations sociales</li>
+                    </ul>
+                </div>
+                <div class="problem-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Ce que vous allez accomplir</h2>
+            <p class="section-subtitle">Transformez votre présence et votre impact avec ces résultats concrets</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 class="benefit-title">Parler avec impact</h3>
+                    <p>Captivez votre audience dès les premières secondes et faites passer vos messages avec puissance.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="benefit-title">Leadership naturel</h3>
+                    <p>Devenez cette personne vers qui les autres se tournent naturellement pour obtenir conseils et direction.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="benefit-title">Relations authentiques</h3>
+                    <p>Créez des connexions profondes et durables tant dans votre vie personnelle que professionnelle.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="benefit-title">Opportunités professionnelles</h3>
+                    <p>Obtenez les promotions, reconnaissances et opportunités que vous méritez grâce à votre présence remarquable.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="benefit-title">Confiance inébranlable</h3>
+                    <p>Développez une assurance qui vous permettra d'aborder n'importe quelle situation sociale avec sérénité.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="benefit-title">Influence naturelle</h3>
+                    <p>Soyez écouté et respecté sans avoir à forcer votre voix ou votre personnalité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="section" id="programme">
+        <div class="container">
+            <h2 class="section-title">Votre parcours de transformation</h2>
+            <p class="section-subtitle">Découvrez les 9 lois qui ont transformé des milliers de vies</p>
+            
+            <div class="program-content">
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">1</div>
+                        <h3 class="module-title">Maîtrisez votre énergie magnétique</h3>
+                    </div>
+                    <p>Développez une aura qui capte instantanément l'attention et le respect dans n'importe quelle pièce.</p>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">2</div>
+                        <h3 class="module-title">L'art du mystère fascinant</h3>
+                    </div>
+                    <p>Devenez une énigme que les autres ont envie de résoudre, créant ainsi une attraction naturelle.</p>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">3</div>
+                        <h3 class="module-title">Signature visuelle inoubliable</h3>
+                    </div>
+                    <p>Créez une image personnelle qui marque les esprits et communique votre valeur avant même que vous ne parliez.</p>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">4</div>
+                        <h3 class="module-title">Vision de pionnier</h3>
+                    </div>
+                    <p>Développez la capacité de voir l'avenir et de guider les autres vers des horizons nouveaux.</p>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">5</div>
+                        <h3 class="module-title">Leadership par l'exemple</h3>
+                    </div>
+                    <p>Inspirez naturellement par vos actions et devenez un modèle sans effort.</p>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">6</div>
+                        <h3 class="module-title">Cercle d'influence stratégique</h3>
+                    </div>
+                    <p>Construisez un réseau d'alliés de qualité qui amplifient votre pouvoir et votre impact.</p>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">7</div>
+                        <h3 class="module-title">Excellence par l'obsession</h3>
+                    </div>
+                    <p>Transformez la discipline en avantage compétitif pour exceller dans votre domaine.</p>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">8</div>
+                        <h3 class="module-title">Croissance perpétuelle</h3>
+                    </div>
+                    <p>Adoptez une mentalité d'apprentissage continu pour toujours rester en avance.</p>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">9</div>
+                        <h3 class="module-title">Héritage éternel</h3>
+                    </div>
+                    <p>Créez un impact qui vous survivra et dont les gens se souviendront pour toujours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Ils ont transformé leur vie</h2>
+            <p class="section-subtitle">Découvrez ce que disent nos participants au Cameroun</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Cette formation a changé ma vie professionnelle. Après seulement 3 semaines, j'ai obtenu une promotion que j'attendais depuis 2 ans. Le module sur le leadership par l'exemple a été révolutionnaire pour moi."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Jean-Claude T.</h4>
+                            <p>Chef de service, Douala</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"J'avais toujours peur de prendre la parole en public. Grâce aux techniques enseignées, j'ai pu présenter mon projet devant 200 personnes avec confiance. Les 1500 FCFA investis sont le meilleur investissement de ma vie."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Fatou D.</h4>
+                            <p>Entrepreneure, Yaoundé</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Les résultats ont été immédiats. Mon entourage a remarqué un changement dans ma façon de communiquer. J'attire maintenant des opportunités au lieu de les chercher. Cette formation vaut 10 fois son prix."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Samuel K.</h4>
+                            <p>Commercial, Bafoussam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus Section -->
+    <section class="section bonus-section" id="bonus">
+        <div class="container">
+            <h2 class="section-title">Vos cadeaux exclusifs</h2>
+            <p class="section-subtitle">Pour maximiser votre transformation, recevez ces bonus d'une valeur inestimable</p>
+            
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <div class="bonus-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Guide PDF : Séduction Éthique</h3>
+                    <p>Maîtrisez l'art de créer des connexions authentiques et profondes dans vos relations personnelles et professionnelles.</p>
+                    <p><strong>Valeur : 5,000 FCFA</strong></p>
+                </div>
+                
+                <div class="bonus-card">
+                    <div class="bonus-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Session Coaching Privé</h3>
+                    <p>30 minutes de consultation individuelle avec un coach certifié pour personnaliser votre parcours.</p>
+                    <p><strong>Valeur : 10,000 FCFA</strong></p>
+                </div>
+                
+                <div class="bonus-card">
+                    <div class="bonus-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Accès Communauté VIP</h3>
+                    <p>Rejoignez notre groupe privé d'élèves motivés pour échanger, réseauter et recevoir du soutien continu.</p>
+                    <p><strong>Valeur : 7,000 FCFA</strong></p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; background: rgba(212, 175, 55, 0.2); padding: 20px; border-radius: var(--border-radius); max-width: 700px; margin-left: auto; margin-right: auto;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;"><i class="fas fa-gift"></i> Valeur totale des bonus : <span style="color: var(--primary);">22,000 FCFA</span></h3>
+                <p>Ces bonus vous sont offerts GRATUITEMENT lorsque vous vous inscrivez aujourd'hui</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Votre investissement pour une transformation permanente</h2>
+            <p class="section-subtitle">Accédez à tout le programme et vos bonus exclusifs</p>
+            
+            <div class="pricing-box">
+                <div class="pricing-header">
+                    <h3 class="pricing-title">Formation Complète "Les 9 Lois du Charisme"</h3>
+                    <p>Accès immédiat et à vie</p>
+                </div>
+                
+                <div class="investment">
+                    <span class="new-price">1,500</span>
+                    <span class="currency">FCFA</span>
+                </div>
+                
+                <p style="margin-bottom: 20px;"><strong>Soit moins de 200 FCFA par loi maîtrisée</strong></p>
+                
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check-circle"></i> Accès complet aux 9 modules de formation</li>
+                    <li><i class="fas fa-check-circle"></i> 35+ leçons vidéo en haute qualité</li>
+                    <li><i class="fas fa-check-circle"></i> Cahiers d'exercices pratiques pour chaque module</li>
+                    <li><i class="fas fa-check-circle"></i> Tous les bonus exclusifs (valeur 22,000 FCFA)</li>
+                    <li><i class="fas fa-check-circle"></i> Accès à vie et mises à jour gratuites</li>
+                    <li><i class="fas fa-check-circle"></i> Support technique par WhatsApp</li>
+                </ul>
+                
+                <a href="#pricing" class="cta-button">
+                    <i class="fas fa-shopping-cart"></i> Obtenir l'accès maintenant
+                </a>
+                
+                <div class="guarantee" style="margin-top: 20px;">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Garantie satisfait ou remboursé pendant 30 jours</span>
+                </div>
+                
+                <div style="margin-top: 30px; background: #e9f7ef; padding: 15px; border-radius: var(--border-radius);">
+                    <p><i class="fas fa-bolt" style="color: var(--success);"></i> <strong>Offre spéciale camerounaise :</strong> Payez par Mobile Money (Orange Money, MTN Mobile Money) ou carte bancaire</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <p class="section-subtitle">Trouvez les réponses à vos interrogations</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Comment vais-je accéder à la formation ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Immédiatement après votre paiement, vous recevrez un email avec vos identifiants pour accéder à notre plateforme d'apprentissage. Vous pourrez commencer la formation dès réception.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quels sont les moyens de paiement disponibles ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous acceptons les paiements par Mobile Money (Orange Money, MTN Mobile Money) ainsi que les cartes bancaires (Visa, Mastercard) pour votre convenance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Combien de temps dure l'accès à la formation ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous bénéficiez d'un accès à vie à la formation, y compris toutes les futures mises à jour et améliorations que nous apporterons au programme.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Que couvre la garantie satisfait ou remboursé ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Si dans les 30 jours suivant votre achat vous estimez que la formation ne vous apporte pas de valeur, envoyez-nous simplement un email et nous vous rembourserons intégralement sans poser de questions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Aurai-je du support si j'ai des questions ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolument! Vous avez accès à notre équipe de support par email et WhatsApp pour toute question technique ou pédagogique. De plus, notre communauté VIP est là pour vous soutenir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">CharismeMaster</div>
+                <p>Transformez votre présence, transformez votre vie. Les 9 Lois du Charisme est un système éprouvé pour développer une influence magnétique dans tous les aspects de votre existence.</p>
+                
+                <div class="footer-links">
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="mailto:support@charismemaster.cm">Contact</a>
+                </div>
+                
+                <div class="copyright">
+                    © 2023 CharismeMaster. Tous droits réservés.<br>
+                    Douala, Cameroun | +237 6XX XXX XXX
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
